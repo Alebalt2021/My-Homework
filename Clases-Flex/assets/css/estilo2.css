@@ -1,0 +1,16 @@
+body {
+    background-color: #ffffff;
+    opacity: 1;
+    background-image:  linear-gradient(#fce062 3.9000000000000004px, transparent 3.9000000000000004px), linear-gradient(to right, #fce062 3.9000000000000004px, #ffffff 3.9000000000000004px);
+    background-size: 78px 78px;
+}
+img{
+    width: 100px;
+    height: 100px;
+}
+.list-containers{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    height: 550px;
+}
