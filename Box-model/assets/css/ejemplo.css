@@ -1,0 +1,37 @@
+body{
+    background-image: url(https://images2.alphacoders.com/566/thumb-1920-566240.jpg);
+    font-family: 'Gluten', cursiva;
+}
+h1 {
+    border: solid 3px rgb(255, 153, 0);
+    color: white;
+}
+.caja1{
+    border: dotted 5px rgb(0, 255, 242);
+    background-color: rgb(255, 252, 70);
+    display: inline-block;
+}
+.contender1 {
+    border: dashed 3px rgb(81, 255, 0);
+    padding: 10px;
+    display: inline-block;
+}
+
+.caja2{
+    border: solid 3px rgb(0, 183, 255);
+    display: inline;
+    background-color: rgb(142, 200, 255);
+}
+.contender2{
+    background-color: orange;
+    display: inline;
+}
+
+.caja3{
+    border: solid 3px red;
+    background-color: rgb(255, 180, 68);
+}
+.contender3{
+    background-color: rgb(255, 255, 173);
+    display: flex;
+}

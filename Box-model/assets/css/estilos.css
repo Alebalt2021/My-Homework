@@ -1,0 +1,28 @@
+h1{
+    border: solid 3px red;
+}
+p{
+    border: dotted 3px blue;
+    display: inline-block;
+}
+div{
+    border: dashed 3px black;
+    display: inline-block;
+}
+h2{
+    display: inline;
+    border: dashed 3px green;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    /*horizontal*/
+    justify-content: center;
+    /*vertical*/
+    align-items: center;
+    border: solid 3px orange;
+    height: 150px;
+}
+li{
+    border: dashed 1px purple;
+}
