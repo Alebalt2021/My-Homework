@@ -1,0 +1,82 @@
+body {
+    background-color: #ffffff;
+    opacity: 2;
+    background: radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 62.5px 62.5px, linear-gradient(#c534ff 5px, transparent 5px) 0 -2.5px, linear-gradient(90deg, #c534ff 5px, #ffffff 5px) -2.5px 0;
+    background-size: 125px 125px, 125px 125px, 62.5px 62.5px, 62.5px 62.5px;
+}
+h1 {
+    font-family: 'Anton', sans-serif;
+    color: rgb(212, 35, 212);
+    text-shadow: 0 0 8px rgb(63, 114, 226);
+}
+.content-form {
+    display: flex;
+    flex-flow: row wrap;
+}
+.field, .field-area {
+    margin: 0 3px 3px 0;
+    padding: 3px 2px;
+    border: 2px solid rgb(36, 33, 33);
+}
+.field {
+    flex: 1 0 30%;
+    width: 45%;
+    float: left; 
+}
+.field-area {
+    flex: 1 0 90%;
+    width: 90%;
+}
+.btn-form {
+    padding: 3px;
+    background-color: rgb(222, 37, 255);
+    color: white;
+}
+.btn-form:hover {
+    background-color: rgb(175, 0, 152);
+}
+
+/*Estilo de cartas*/
+h3 {
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+}
+p {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 18px;
+}
+.pokemon-container {
+    background-color: rgba(190, 255, 13, 0.781);
+    padding: 50px 30px;
+}
+.pokemon-container h2 {
+    text-align: center;
+    margin: 0 0 20px 0;
+    color: rgb(19, 66, 0);
+    text-shadow: 0 0 15px orange;
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+}
+.flex-parent {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.flex-child {
+    width: 320px;
+    padding: 0 10px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    box-shadow: grey 1px;
+}
+img {
+    max-width: 100%;
+}
+.info {
+    padding: 10px;
+}
+.post {
+    background-color: rgba(255, 255, 255, 0.87);
+}
