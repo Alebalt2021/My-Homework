@@ -53,7 +53,7 @@ function fSlice(e){
 function fConcat(e){
     colorsArray = ["Rosa","Negro","Dorado"]
     mergeArray = names.concat(colorsArray);
-    showData(mergeArray,newContent)
+    showData(mergeArray,newContent);
 }
 
 function fSplice(e){
