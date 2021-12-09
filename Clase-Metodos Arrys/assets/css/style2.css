@@ -1,0 +1,42 @@
+body { 
+    background-image: url(https://images6.alphacoders.com/481/thumb-1920-481920.jpg);
+}
+
+.todo {
+    background-color: rgba(255, 255, 255, 0.719);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 30px auto;
+    width: 700px;
+    text-align: center;
+}
+
+#array-index-methods {
+    color: rgb(46, 46, 87);
+    font-family: 'Secular One', sans-serif;
+    font-size: 20px;
+}
+
+button {
+    background-color: rgb(214, 193, 0);
+    border-radius: 30px;
+    height: 32px;
+    width: 140px;
+    color: black;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+input {
+    padding: 5px 20px;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 14px;
+}
+
+#results-content{
+    font-family: 'Patrick Hand', cursive;
+    font-size: 20px;
+    background-color: burlywood;
+}
