@@ -1,0 +1,36 @@
+body {
+    background-image: url(https://assets.pokemon.com//assets/cms2-es-es/img/misc/virtual-backgrounds/masters/forest.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    justify-content: center;
+}
+.titulo {
+    font-family: 'Sigmar One', cursive;
+    font-size: 45px;
+    background-color: rgba(0, 0, 0, 0.699);
+    color: chartreuse;
+}
+
+img { 
+    background-color: rgba(0, 0, 0, 0.514);
+    width: 450px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+#pk-name {
+    border-radius: 5px;
+    padding: 10px 40px;
+    margin: 10px 0;
+    font-size: 18px;
+}
+.boton {
+    font-size: 20px;
+    border: 2px solid chartreuse;
+    font-weight: 800;
+    padding: 10px 35px;
+    color: chartreuse;
+    background-color: black;
+}
