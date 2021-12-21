@@ -31,7 +31,7 @@ $(document).ready(function(){
     $("#btn-buscar").click(function(e) {
         //Obtener lo que se ha escrito en el input
         var name = $("#pk-name").val().toLowerCase();
-        //vVerificar si lo que se ha escrito es diferente que vacio
+        //Verificar si lo que se ha escrito es diferente que vacio
         if(name!=""){
             //Llamar a la funcion para que haga la busqueda con el nombre
             searchPokemon(name);

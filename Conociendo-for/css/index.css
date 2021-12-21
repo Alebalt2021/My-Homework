@@ -1,0 +1,39 @@
+body{
+    background-image: url(https://images3.alphacoders.com/617/thumb-1920-617971.jpg);
+}
+h1{
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+    font-size: 50px;
+    color: rgb(230, 210, 30);
+    background-color: rgb(138, 123, 123);
+}
+div{
+    text-align: center;
+}
+button{
+    font-size: 20px;
+    border: 2px solid rgb(125, 16, 16);
+    font-weight: 800;
+    padding: 10px 25px;
+    color: rgb(180, 31, 31);
+    background-color: rgb(93, 101, 129);
+}
+button:hover{
+    background-color: rgb(133, 161, 253);
+}
+input{
+    border-radius: 5px;
+    padding: 5px 20px;
+    margin: 10px 0;
+}
+.caja{
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    height: 40px;
+    width: 200px;
+    text-align: center;
+    margin:0px auto;
+    border: yellow 3px solid;
+    margin-top: 5px;
+}

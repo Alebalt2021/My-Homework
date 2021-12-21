@@ -1,0 +1,44 @@
+body{
+    background-image: url(https://images8.alphacoders.com/448/thumb-1920-448944.jpg);
+}
+h1{
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+    font-size: 50px;
+    color: rgb(255, 184, 19);
+    background-color: rgb(149, 235, 202);
+}
+div{
+    text-align: center;
+}
+button{
+    font-size: 20px;
+    border: 2px solid rgb(84, 207, 26);
+    border-radius: 50px;
+    font-weight: 800;
+    padding: 10px 25px;
+    color: rgb(72, 180, 22);
+    background-color: rgb(136, 255, 215);
+}
+button:hover{
+    background-color: rgb(86, 255, 199);
+}
+input{
+    border-radius: 5px;
+    padding: 5px 20px;
+    margin: 10px 0;
+    width: 300px;
+}
+.caja{
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    width: 300px;
+    text-align: center;
+    margin:0px auto;
+    border: yellow 3px solid;
+    margin-top: 5px;
+}
+p{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 18px;
+}

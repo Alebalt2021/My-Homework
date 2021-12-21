@@ -1,0 +1,52 @@
+body {
+    background-image: url(https://image.freepik.com/vector-gratis/fondo-abstracto-acuarela-papel-aluminio_79603-910.jpg);
+    background-position: center;/* 👉para centrar la img*/
+    background-repeat: no-repeat;/*👉 sirve para que no se repita la img en caso no entre*/
+    background-size: cover;/*👉sirve para que entre en toda el espacio de la caja*/
+    background-attachment: fixed;
+    margin: 0px;
+}
+/*header*/
+header {
+    background-color: rgba(255, 163, 191, 0.911);
+    height: 90px;
+}
+header a {
+    float: left; 
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 100px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 45px;
+    letter-spacing: 0.137em;
+    color: white;
+    text-shadow: 0 0 2px black;
+}
+
+/*Main*/
+.container {
+    padding: 50px 30px;
+}
+.img-api{
+    height: 250px;
+    border-radius: 10%;
+    border: white 3px solid;
+}
+span {
+    color: rgb(46, 46, 46);
+    background-color: rgb(255, 146, 179);
+    font-family: 'Concert One', cursive;
+    font-size: 20px;
+}
+.flex-child {
+    width: 320px;
+    padding: 0 10px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+.flex-parent {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
