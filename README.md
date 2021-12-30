@@ -1,6 +1,16 @@
-# 📑 My-Homework 📑
-Aqui estan colgados mis trabajos realizados de cada semana del BOOTCAMP.
+# 📚 My-Homework 👩‍💻
+En este respositorio se encuentran mis trabajos realizados y las clases de cada unidad. 
 
-![](https://github.com/Alebalt2021/My-Homework/blob/main/Clases-Flex/assets/images/imagen%20de%20estudio.jpg)
+Encontraremos los siguientes documentos:
+- HTML / (estrucrura) 🕸
+- CSS / (estilos) 🎨
+- JS / (javascript) 🧠
+- IMG / (imagenes) 🖼
+- FONTS / (tipografias) 💯
 
-___El EXITO llega a quienes estan dispuestos a trabajar un poco mas duro que el resto.___
+<img src="https://github.com/Alebalt2021/My-Homework/blob/main/Clases-Flex/assets/images/imagen%20de%20estudio.jpg" width="700" height="380">
+
+## ✨ ___Galeria de INSPIRACIÓN___ ✨
+<img src="https://c.tenor.com/xgdko3RDQm4AAAAC/animo-tu-puedes.gif" width="500" height="300">
+
+_El EXITO 🌟 llega a quienes estan dispuestos a trabajar 🗂 un poco mas duro que el resto 😁._
