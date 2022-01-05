@@ -1,5 +1,6 @@
 $(document).ready(function(){
     $("#registro").hide();
+    
 
     $("#btn-register").click(function(){
         $("#login-container").hide();
@@ -62,10 +63,26 @@ $(document).ready(function(){
     })
     //Desconexion de usuario
     //Boton LogOut
-    $("#logout").click(function(e){
+    $("#btn-logout").click(function(e){
         e.preventDefault();
         auth.signOut().then(() => {
-            console.log("Log Out");
+            alert("Sesion Cerrada");
+            $("#content").hide();
+            $("#login-container").show();
+        })
+    })
+
+    var provider = new firebase.auth.GoogleAuthProvider();
+    provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+    //Inicar sesion con GOOGLE
+    $("#btn-login-google").click(function(e){
+        e.preventDefault();
+        auth.signInWithPopup(provider)
+        .then(result => {
+            alert("Ingreso con google");
+        })
+        .catch(error =>{
+            alert(error);
         })
     })
 
@@ -73,6 +90,7 @@ $(document).ready(function(){
         if(user){
             //Sesion Iniciada
             $("#login-container").hide();
+            $("#content").show();
         }
         else{
             //Sesion finalizada

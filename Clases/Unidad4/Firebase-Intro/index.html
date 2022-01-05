@@ -10,26 +10,37 @@
     
     <div id="login-container">
         <h2>Inicar Sesion</h2>
-          <label>Correo electronico</label>
-          <input type="email" id="mail">
+        <label>Correo electronico</label>
+        <input type="email" id="mail">
     
-          <label>Contraseña</label>
-          <input type="password" id="pass">
+        <label>Contraseña</label>
+        <input type="password" id="pass">
 
-        <button type="submit" id="btn-login">Ingresar</button>
+        <button type="submit" id="btn-login">Entrar con Correo</button>
+        <button type="submit" id="btn-login-google">Entrar con Google</button>
         <button type="submit" id="btn-register">Registrase</button>
     </div>
     
     <div id="registro">
         <h2>Crear cuenta</h2>
-            <input type="email" id="mail-new">
-            <input type="password" id="pass-new">
+        <input type="email" id="mail-new">
+        <input type="password" id="pass-new">
         <button id="btn-singup">Crear cuenta</button>
     </div>
-    <button id="logout">Cerrar cuenta</button>
+
+    <div id="content">
+        <div>
+            <h1>Bienvenido a la Red Social</h1>
+        </div>
+        <div>
+            <button id="btn-logout">Cerrar sesion</button>
+        </div>
+    </div>
+
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
 <script src="assets/js/connection.js"></script>
 </html>
