@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase</title>
+</head>
+<body>
+    
+    <div id="login-container">
+        <h2>Inicar Sesion</h2>
+          <label>Correo electronico</label>
+          <input type="email" id="mail">
+    
+          <label>Contraseña</label>
+          <input type="password" id="pass">
+
+        <button type="submit" id="btn-login">Ingresar</button>
+        <button type="submit" id="btn-register">Registrase</button>
+    </div>
+    
+    <div id="registro">
+        <h2>Crear cuenta</h2>
+            <input type="email" id="mail-new">
+            <input type="password" id="pass-new">
+        <button id="btn-singup">Crear cuenta</button>
+    </div>
+    <button id="logout">Cerrar cuenta</button>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="assets/js/connection.js"></script>
+</html>
