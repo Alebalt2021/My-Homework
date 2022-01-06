@@ -1,5 +1,6 @@
 $(document).ready(function(){
     $("#registro").hide();
+    $("#content").hide();
     
 
     $("#btn-register").click(function(){
@@ -73,7 +74,6 @@ $(document).ready(function(){
     })
 
     var provider = new firebase.auth.GoogleAuthProvider();
-    provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
     //Inicar sesion con GOOGLE
     $("#btn-login-google").click(function(e){
         e.preventDefault();
@@ -86,17 +86,81 @@ $(document).ready(function(){
         })
     })
 
+    var providerFace = new firebase.auth.FacebookAuthProvider();
+    providerFace.addScope('https://firebase.google.com/docs/auth/web/facebook-login');
+    //Inciar sesion con Facebook
+    $("#btn-login-facebook").click(function(e){
+        e.preventDefault();
+        auth.signInWithPopup(providerFace)
+        .then(result => {
+            alert("Ingreso con Facebook");
+        })
+        .catch(error =>{
+            alert(error);
+        })
+    })
+
     auth.onAuthStateChanged((user)=>{
         if(user){
             //Sesion Iniciada
             $("#login-container").hide();
+            $("#registro").hide();
             $("#content").show();
+            readPosts();
         }
         else{
             //Sesion finalizada
+            $("#content").hide();
             $("#login-container").show();
         }
     })
 
+    const db = firebase.firestore();
+    //Publicar un nuevo estado
+    $("#btn-publish").click(function(e){
+        e.preventDefault();
+        let postText = $("#status-text").val();
+        let date = new Date();
+        db.collection("posts").add({
+            text: postText,
+            day: date.getDate(),
+            month: date.getMonth() + 1,
+            year: date.getFullYear(),
+        })
+        .then((docRef)=>{
+            alert("Estado publicado");
+            $("#status-text").val('');
+            readPosts();
+        })
+        .catch((error)=>{
+            alert(error);
+        })
+    })
+
+    function readPosts(){
+        db.collection("posts").get().then((posts)=>{
+            listPosts(posts.docs);
+        })
+    }
+
+    function listPosts(data){
+        var divContent = $("#post-feed");
+        divContent.empty();
+        if(data.length > 0){
+            let content = "";
+            data.forEach(document => {
+                let doc = document.data();
+                const divPost =`
+                <div style='border: solid 2px black'>
+                <p>${doc.text}</p> <br>
+                <span>Publicado el: ${doc.day}/${doc.month}/${doc.year}.</span>
+                </div>
+                <hr>
+                `;
+                content += divPost;
+            });
+            divContent.append(content);
+        }
+    }
 })
 

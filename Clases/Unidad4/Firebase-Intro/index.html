@@ -18,6 +18,7 @@
 
         <button type="submit" id="btn-login">Entrar con Correo</button>
         <button type="submit" id="btn-login-google">Entrar con Google</button>
+        <button type="submit" id="btn-login-facebook" >Entrar con Facebook</button>
         <button type="submit" id="btn-register">Registrase</button>
     </div>
     
@@ -32,6 +33,16 @@
         <div>
             <h1>Bienvenido a la Red Social</h1>
         </div>
+
+        <div>
+            <textarea id="status-text"></textarea>
+            <button id="btn-publish">Publicar</button>
+        </div>
+
+        <div id="post-feed">
+            
+        </div>
+
         <div>
             <button id="btn-logout">Cerrar sesion</button>
         </div>
@@ -41,6 +52,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 
 <script src="assets/js/connection.js"></script>
 </html>
