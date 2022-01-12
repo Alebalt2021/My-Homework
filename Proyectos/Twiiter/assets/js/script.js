@@ -1,22 +1,21 @@
 $(document).ready(function(){
     $("#registro").hide();
     $("#content").hide();
-    
 
     $("#btn-register").click(function(){
         $("#login-container").hide();
         $("#registro").show();
     })
-    // La configuración de Firebase de su aplicación web
-    // Para Firebase JS SDK v7.20.0 y versiones posteriores, MeasureId es opcional
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     const firebaseConfig = {
-        apiKey: "AIzaSyCs_IhKdb_gE0XjkzURoGlnJBtf79Ah2mU",
-        authDomain: "proyecto-bootcamp-unicef-27f07.firebaseapp.com",
-        projectId: "proyecto-bootcamp-unicef-27f07",
-        storageBucket: "proyecto-bootcamp-unicef-27f07.appspot.com",
-        messagingSenderId: "495616354191",
-        appId: "1:495616354191:web:d24318a7b073e8f4938dfa",
-        measurementId: "G-3RYMKGBGJF"
+    apiKey: "AIzaSyBQ3fjGFA8-IdMZF9ZEn8joYNuOdl1PTC0",
+    authDomain: "proyecto-twiiter.firebaseapp.com",
+    projectId: "proyecto-twiiter",
+    storageBucket: "proyecto-twiiter.appspot.com",
+    messagingSenderId: "1029774669801",
+    appId: "1:1029774669801:web:1fc234869fc716ad22fd78",
+    measurementId: "G-QGTNK18WSN"
     };
 
     //Inicializar Firebase
@@ -111,6 +110,7 @@ $(document).ready(function(){
         else{
             //Sesion finalizada
             $("#content").hide();
+            $("#desaparecido").hide();
             $("#login-container").show();
         }
     })
@@ -126,6 +126,9 @@ $(document).ready(function(){
             day: date.getDate(),
             month: date.getMonth() + 1,
             year: date.getFullYear(),
+            hours: date.getHours(),
+            minutes: date.getMinutes(),
+            seconds: date.getSeconds(),
         })
         .then((docRef)=>{
             alert("Estado publicado");
@@ -151,58 +154,24 @@ $(document).ready(function(){
             data.forEach(document => {
                 let doc = document.data();
                 const divPost =`
-                <div style='border: solid 2px black'>
-                <p>${doc.text}</p> <br>
-                <span>Publicado el: ${doc.day}/${doc.month}/${doc.year}.</span>
-                <button data-id="${document.id}" class="btn btn-warning btn-edit-post">Editar</button>
-                <button data-id="${document.id}" class="btn btn-danger btn-delete-post">Eliminar</button>
+                <div class="caja" style='border: solid 2px rgb(209, 171, 99)'>
+                <p style="margin-bottom: 0px; margin-bottom: -8px;" >${doc.text}</p> <br>
+                <span>Publicado el: ${doc.day}/${doc.month}/${doc.year} Hora ${doc.hours}:${doc.minutes}:${doc.seconds}.</span>
                 </div>
                 <hr>
                 `;
                 content += divPost;
             });
             divContent.append(content);
-            //Agregar listener a btn-delete
-            const btnDelete = document.querySelectorAll(".btn-delete-post");
-            btnDelete.forEach(btn=>{
-                btn.addEventListener("click",(e)=>{
-                    const id = e.target.dataset.id;
-                    DeletePost(id);
-                })
-            })
         }
     }
+})
 
-    function DeletePost(id){
-        db.collection("posts").doc(id).delete().then(() => {
-            alert("Se ha eliminado correctamente");
-            readPosts();
-        })
-        .catch((error) => {
-            console.error("Detalle del Error: ", error);
-        });
-    }
-    function UpdatePost(id){
-        db.collection("posts").doc(id).get().then((doc)=>{
-            const post = doc.data();
-            $("").val(item.post);
-        })
-        .catch((error) => {
-            alert("Error: ", error);
-        });
-    }
-    $("#btn_update").click(function(e){
-        e.preventDefault();
-        let post_upgrade = $("").val();
-        let id_post = $("").val();
-        db.collection("posts").doc(id_post).update({
-            post: post_upgrade,
-        }).then(()=>{
-            alert("Post Actualizado")
-        })
-        .catch((error)=>{
-            alert("Error: ", error);
-        })
-    })
+//Contador de caracteres
+document.getElementById("status-text").addEventListener("input",function(){
+    var input = document.getElementById("status-text");
+    var p = document.getElementById("counter");
+    p.innerHTML = input.value.length;
+
 })
 

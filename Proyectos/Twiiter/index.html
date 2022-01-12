@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--CDN de iconos-->
+    <script src="https://kit.fontawesome.com/5a3c30ad6c.js" crossorigin="anonymous"></script>
+    <title>Twiiter Otaku</title>
+    <!--CDN Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Tipografias-->
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Header-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-3 shadow-sm" id="menu">
+        <div class="container-fluid">
+            <a class="tituloH navbar-brand" href="#login-container">
+                <img src="https://i.pinimg.com/originals/02/7a/44/027a44f10e23a404c076dfd6f1275932.png" alt="logo" width="48" height="45" class="d-inline-block align-text-top">
+                Twiiter
+            </a>
+            <form class="d-flex">
+                <button class="btn botonH" id="btn-logout">Salir</button>
+            </form>
+        </div>
+        </nav>
+
+    <!-- FORMULARIO (login) -->
+    
+    <div class="container text-center" id="login-container">
+        <div class="row justify-content-center pt-5 mt-5 mr-1">
+            <div class="col-md-4 formulario needs-validation">
+                    <div class="form-group text-center pt-3">
+                        <h1 class="text-light subtituloM">LOGIN</h1>
+                    </div>
+                    <div class="form-group mx-sm-4 pb-3">
+                        <input type="email" class="form-control parrafoM" placeholder="Ingrese su usuario" id="mail">
+                        <div class="valid-feedback">!Ok válido¡</div>
+                        <div class="invalid-feedback">Complete el campo</div>
+                    </div>
+                    <div class="form-group mx-sm-4 pb-3">
+                        <input type="password" class="form-control parrafoM" placeholder="Ingrese su contraseña" id="pass">
+                    </div>
+                    <div class="form-group mx-sm-4 pb-3">
+                        <button type="submit" class="btn btn-block ingresar px-5 botonNew" value="INGRESAR" id="btn-login">INGRESAR</button>
+                    </div>
+                    <p class="font-weight-bold text-center text-white letra">O inicia sesión con:</p>
+                    <div class="form-group mx-sm-4 pb-3 d-flex justify-content-around">
+                        <button class="btn btn-outline-light flex-grow-1 me-2 icono" id="btn-login-google"><i class="fab fa-google lead me-2"></i>Google</button>
+                        <button class="btn btn-outline-light flex-grow-1 ms-2 icono" id="btn-login-facebook"><i class="fab fa-facebook lead me-2"></i>Facebook</button>
+                    </div>
+                    <div class="form-group mx-sm-4 pb-3">
+                        <p class="d-inline-block mb-0 letra">¿Todavia no tienes cuenta? <a class="letra2" id="btn-register" href="#registro" class="text-light font-weight-bold text-decoration-none">Crea una ahora</a></p>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- FORMULARIO (Crear cuenta) -->
+
+    <div class="container text-center" id="registro">
+        <div class="row justify-content-center pt-5 mt-5 mr-1">
+            <div class="col-md-4 formulario">
+                    <div class="form-group text-center pt-3">
+                        <h1 class="text-light subtituloM ">Crear cuenta</h1>
+                    </div>
+                    <div class="form-group mx-sm-4 pb-3">
+                        <input type="email" class="form-control parrafoM" placeholder="Ingrese su usuario" id="mail-new">
+                    </div>
+                    <div class="form-group mx-sm-4 pb-3">
+                        <input type="password" class="form-control parrafoM" placeholder="Ingrese su contraseña" id="pass-new">
+                    </div>
+                    <div class="form-group mx-sm-4 pb-3">
+                        <button type="submit" class="btn btn-block ingresar botonNew" id="btn-singup">CREAR CUENTA</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- POSTEAR (caja input) -->
+    <div class="card bg-dark text-white mx-auto my-4" id="content" style="border-radius: 1rem; width: 800px;">
+        <div class="card-body">
+            <form id="postForm" action="">
+            
+            <h5>Escribe tu mensaje</h5>
+            <label class="form-label" for="postText">Mensaje</label>
+                <div class="form-outline form-white mb-4">
+                    <textarea class="form-control form-control-lg" id="status-text" rows="3" maxlength="150"></textarea>
+                    <div class="mover">
+                        <span id="counter" style="line-height: 0.5;">0</span>/150
+                    </div>
+                </div>
+            <button id="btn-publish" class="btn btn-outline-light btn-lg px-5">Postear</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="desaparecido">
+        <div id="post-feed">
+        
+        </div>
+    </div>
+
+    <script>
+            // Validacion del formulario login
+    (function () {
+        'use strict'
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+                }
+                form.classList.add('was-validated')
+            }, false)
+            })
+    })()
+    </script>
+
+    <!-- CDN jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Se agrega el CDN de Firebase, agregar los demas CDN (jquery y bootstrap)-->
+    <!-- CDN Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <!-- CDN Authentication Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <!-- CDN Firestore Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+<script src="assets/js/script.js"></script>
+</html>
